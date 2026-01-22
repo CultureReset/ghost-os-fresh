@@ -2963,3 +2963,145 @@ body, html {
         font-size: 2.75rem !important;
     }
 }
+
+/* === LARGER FONTS FOR MOBILE/SMALL SCREENS === */
+@media (max-width: 768px) {
+    /* Base body text */
+    body {
+        font-size: 18px !important;
+    }
+
+    /* ALL TEXT ELEMENTS */
+    p, span, div, a, li, label, input, textarea, button {
+        font-size: 1.1rem !important;
+        line-height: 1.7 !important;
+    }
+
+    /* All headings */
+    h1 {
+        font-size: 3rem !important;
+    }
+
+    h2 {
+        font-size: 2.5rem !important;
+    }
+
+    h3 {
+        font-size: 1.75rem !important;
+    }
+
+    h4 {
+        font-size: 1.5rem !important;
+    }
+
+    h5, h6 {
+        font-size: 1.25rem !important;
+    }
+
+    /* Section subtitles */
+    .section-subtitle {
+        font-size: 1.4rem !important;
+    }
+
+    /* Hero subtitle */
+    .hero-subtitle {
+        font-size: 1.4rem !important;
+    }
+
+    /* Card text */
+    .feature-card p,
+    .automation-card p,
+    .privacy-card p,
+    .method-card p,
+    .fly-example-item,
+    .tool-name,
+    .source-name,
+    .source-data {
+        font-size: 1.2rem !important;
+    }
+
+    /* Card headings */
+    .feature-card h3,
+    .automation-card h3,
+    .privacy-card h3,
+    .method-card h3 {
+        font-size: 1.6rem !important;
+    }
+
+    /* Flow labels and arrows */
+    .flow-label,
+    .flow-arrow {
+        font-size: 1.1rem !important;
+    }
+
+    /* Buttons */
+    .btn,
+    .nav-link {
+        font-size: 1.2rem !important;
+        padding: 1rem 2.2rem !important;
+    }
+
+    /* Form elements */
+    label {
+        font-size: 1.15rem !important;
+    }
+
+    input, textarea, select {
+        font-size: 1.15rem !important;
+        padding: 0.9rem !important;
+    }
+
+    /* Example and demo text */
+    .example-q,
+    .example-a,
+    .query-text,
+    .output-text {
+        font-size: 1.2rem !important;
+    }
+
+    /* Step content */
+    .step-content h4,
+    .scenario-header h3 {
+        font-size: 1.5rem !important;
+    }
+
+    .step-content p,
+    .step-result {
+        font-size: 1.15rem !important;
+    }
+
+    /* Phone mockup text */
+    .text-bubble {
+        font-size: 1.1rem !important;
+    }
+
+    /* Stats and numbers */
+    .stat-number {
+        font-size: 2.5rem !important;
+    }
+
+    .stat-label {
+        font-size: 1.1rem !important;
+    }
+
+    /* Footer text */
+    .footer-copyright,
+    .contact-link {
+        font-size: 1.1rem !important;
+    }
+
+    /* Tool items */
+    .tool-item span,
+    .category-title {
+        font-size: 1.1rem !important;
+    }
+
+    /* Comparison columns */
+    .comparison-column h4 {
+        font-size: 1.4rem !important;
+    }
+
+    .comparison-column li {
+        font-size: 1.15rem !important;
+    }
+}
