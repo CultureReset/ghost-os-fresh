@@ -2843,3 +2843,69 @@ body, html {
         font-size: 2rem !important;
     }
 }
+
+/* === LARGER VERIFIED CALLER ID === */
+.hero-headline-large {
+    font-size: 5rem !important;
+    margin-bottom: 2rem !important;
+}
+
+.gradient-text-large {
+    font-size: 1.2em !important;
+    display: inline-block;
+}
+
+/* Larger header */
+.header {
+    height: 100px !important;
+}
+
+.header-container {
+    height: 100%;
+}
+
+.header-logo {
+    font-size: 2rem !important;
+}
+
+.header-nav {
+    gap: 2rem;
+}
+
+.nav-link {
+    font-size: 1.125rem !important;
+}
+
+/* Adjust hero padding for larger header */
+.hero {
+    padding-top: 120px !important;
+}
+
+.ghost-container {
+    top: 100px;
+}
+
+/* Mobile adjustments for larger header */
+@media (max-width: 768px) {
+    .header {
+        height: 80px !important;
+    }
+    
+    .hero {
+        padding-top: 100px !important;
+    }
+    
+    .hero-headline-large {
+        font-size: 3.5rem !important;
+    }
+    
+    .header-nav {
+        top: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-headline-large {
+        font-size: 2.75rem !important;
+    }
+}
