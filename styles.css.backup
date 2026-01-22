@@ -58,8 +58,6 @@ body {
 html {
     scroll-behavior: smooth;
     -webkit-text-size-adjust: 100%;
-    /* Scale entire page to fit all screen sizes */
-    font-size: clamp(10px, 1.5vw, 16px);
 }
 
 img {
