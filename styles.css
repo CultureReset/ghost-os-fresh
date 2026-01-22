@@ -2788,3 +2788,58 @@ body, html {
 * {
     box-sizing: border-box;
 }
+
+/* === MOBILE TEXT SIZE BOOST === */
+@media (max-width: 768px) {
+    /* Increase base text sizes on mobile */
+    body {
+        font-size: 18px;
+    }
+    
+    .hero-headline {
+        font-size: 2.5rem !important;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.25rem !important;
+    }
+    
+    .section-title {
+        font-size: 2.25rem !important;
+    }
+    
+    .section-subtitle {
+        font-size: 1.15rem !important;
+    }
+    
+    .nav-link {
+        font-size: 1.5rem !important;
+    }
+    
+    .btn {
+        font-size: 1.125rem !important;
+        padding: 1rem 2rem !important;
+    }
+    
+    p, li, span {
+        font-size: 1.125rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 16px;
+    }
+    
+    .hero-headline {
+        font-size: 2rem !important;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.125rem !important;
+    }
+    
+    .section-title {
+        font-size: 2rem !important;
+    }
+}
