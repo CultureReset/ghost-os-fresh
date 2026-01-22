@@ -60,6 +60,8 @@ const devForm = document.getElementById('dev-form');
 const devThankYouMessage = document.getElementById('dev-thank-you-message');
 
 // Handle Early Access Form
+// DISABLED: Using native HTML form submission instead
+/*
 if (form) {
     form.addEventListener('submit', async function(e) {
         e.preventDefault();
@@ -128,8 +130,11 @@ if (form) {
         }
     });
 }
+*/
 
 // Handle Developer Waitlist Form
+// DISABLED: Using native HTML form submission instead
+/*
 if (devForm) {
     devForm.addEventListener('submit', async function(e) {
         e.preventDefault();
@@ -194,6 +199,7 @@ if (devForm) {
         }
     });
 }
+*/
 
 // Function to send lead based on configuration
 async function sendLead(data) {
