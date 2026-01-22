@@ -52,14 +52,15 @@ body {
     line-height: 1.6;
     overflow-x: hidden;
     min-width: 320px;
+    font-size: 1.15rem;
 }
 
 /* Prevent layout shift on resize */
 html {
     scroll-behavior: smooth;
     -webkit-text-size-adjust: 100%;
-    /* Scale entire page to fit all screen sizes */
-    font-size: clamp(10px, 1.5vw, 16px);
+    /* Scale entire page to fit all screen sizes - INCREASED BASE SIZE */
+    font-size: clamp(14px, 1.8vw, 20px);
 }
 
 img {
@@ -3843,4 +3844,43 @@ body, html {
     .flow-arrow {
         transform: rotate(90deg);
     }
+}
+
+/* === GLOBAL TEXT SIZE INCREASES FOR ALL SCREENS === */
+p, span, div:not(.flow-icon):not(.card-icon), a, li {
+    font-size: 1.15rem !important;
+    line-height: 1.7 !important;
+}
+
+h1 {
+    font-size: 4rem !important;
+}
+
+h2 {
+    font-size: 3.5rem !important;
+}
+
+h3 {
+    font-size: 2rem !important;
+}
+
+h4 {
+    font-size: 1.6rem !important;
+}
+
+.section-subtitle {
+    font-size: 1.7rem !important;
+    line-height: 1.6 !important;
+}
+
+button, .btn {
+    font-size: 1.2rem !important;
+}
+
+input, textarea, select {
+    font-size: 1.15rem !important;
+}
+
+label {
+    font-size: 1.15rem !important;
 }
