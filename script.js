@@ -197,7 +197,12 @@ if (devForm) {
 
 // Function to send lead based on configuration
 async function sendLead(data) {
-    switch (LEAD_CONFIG.method) {
+    // FAILSAFE: If dual mode but Supabase not configured, use email only
+    const effectiveMethod = (LEAD_CONFIG.method === 'dual' && !supabaseClient)
+        ? 'email'
+        : LEAD_CONFIG.method;
+
+    switch (effectiveMethod) {
         case 'google-sheets':
             return sendToGoogleSheets(data);
 
@@ -209,21 +214,25 @@ async function sendLead(data) {
 
         case 'dual':
             // Send to BOTH email and Supabase
+            // CRITICAL: Email MUST always work, Supabase is optional
             try {
-                // Send email notification first
-                const emailPromise = sendViaFormSubmit(data);
+                // Send email FIRST - this is critical and must succeed
+                await sendViaFormSubmit(data);
+                console.log('✅ Email sent successfully');
 
-                // Send to Supabase simultaneously
-                const supabasePromise = sendToSupabase(data);
+                // Try Supabase as secondary (won't fail if not configured)
+                try {
+                    await sendToSupabase(data);
+                    console.log('✅ Also saved to Supabase');
+                } catch (supabaseError) {
+                    // Supabase failed but that's OK - email already sent
+                    console.warn('⚠️ Supabase failed (this is OK):', supabaseError.message);
+                }
 
-                // Wait for both to complete
-                await Promise.all([emailPromise, supabasePromise]);
-
-                console.log('✅ Lead sent to both email and Supabase');
                 return Promise.resolve();
             } catch (error) {
-                console.error('Error in dual submission:', error);
-                // Even if one fails, we'll continue (partial success is better than total failure)
+                // Only throw if EMAIL fails (the critical part)
+                console.error('❌ Email submission failed:', error);
                 throw error;
             }
 
