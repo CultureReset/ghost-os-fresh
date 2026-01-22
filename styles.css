@@ -2942,3 +2942,24 @@ body, html {
         font-size: 1.125rem !important;
     }
 }
+
+/* === MAKE ALL SECTION TITLES SAME SIZE AS VERIFIED CALLER ID === */
+.section-title {
+    font-size: 5rem !important;
+    font-weight: 900 !important;
+    margin-bottom: 2rem !important;
+    letter-spacing: -0.02em !important;
+}
+
+/* Override previous smaller settings */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 3.5rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 2.75rem !important;
+    }
+}
