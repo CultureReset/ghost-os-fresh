@@ -3884,3 +3884,38 @@ input, textarea, select {
 label {
     font-size: 1.15rem !important;
 }
+
+/* === TIGHTEN ALL SECTIONS - REMOVE GAPS === */
+.privacy-section,
+.automate-section,
+.multi-tool-section,
+.on-the-fly-section,
+.morning-routine-section,
+.for-business,
+.text-ghost-section,
+.for-personal,
+.how-it-works,
+.examples-section,
+.all-tools-talk,
+.developer-sandbox {
+    padding: 3rem 0 !important;
+    margin: 0 !important;
+}
+
+/* Tighter spacing for hero and about */
+.hero {
+    padding-bottom: 2rem !important;
+}
+
+section {
+    margin-bottom: 0 !important;
+}
+
+.container {
+    padding-top: 0 !important;
+}
+
+/* Remove extra margins */
+.section-title {
+    margin-top: 0 !important;
+}
