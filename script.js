@@ -10,10 +10,11 @@
 // Option 2: 'webhook' - Send to your own API endpoint
 // Option 3: 'email' - Send via FormSubmit.co email service
 // Option 4: 'local' - Just save to localStorage (for testing)
+// Option 5: 'dual' - Send to BOTH email AND Supabase (recommended)
 // ============================================
 
 const LEAD_CONFIG = {
-    method: 'email', // Change this to your preferred method
+    method: 'dual', // Send to both email and Supabase
 
     // For Google Sheets: Set up Web App URL (see SETUP-LEADS.md)
     googleSheetsUrl: 'YOUR_GOOGLE_SHEETS_WEB_APP_URL_HERE',
@@ -22,8 +23,21 @@ const LEAD_CONFIG = {
     webhookUrl: 'https://your-api.com/leads',
 
     // For Email: Your email address for FormSubmit.co
-    formSubmitEmail: 'cybercheckinc@gmail.com'
+    formSubmitEmail: 'cybercheckinc@gmail.com',
+
+    // For Supabase: Your Supabase project credentials
+    // Get these from: https://app.supabase.com/project/YOUR_PROJECT/settings/api
+    supabaseUrl: 'YOUR_SUPABASE_URL_HERE',
+    supabaseAnonKey: 'YOUR_SUPABASE_ANON_KEY_HERE',
+    supabaseTable: 'platform_leads' // Table name for all platform leads
 };
+
+// Initialize Supabase client if configured
+let supabaseClient = null;
+if (LEAD_CONFIG.supabaseUrl && LEAD_CONFIG.supabaseUrl !== 'YOUR_SUPABASE_URL_HERE') {
+    supabaseClient = supabase.createClient(LEAD_CONFIG.supabaseUrl, LEAD_CONFIG.supabaseAnonKey);
+    console.log('✅ Supabase client initialized');
+}
 
 // === SMOOTH SCROLL ===
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -193,6 +207,26 @@ async function sendLead(data) {
         case 'email':
             return sendViaFormSubmit(data);
 
+        case 'dual':
+            // Send to BOTH email and Supabase
+            try {
+                // Send email notification first
+                const emailPromise = sendViaFormSubmit(data);
+
+                // Send to Supabase simultaneously
+                const supabasePromise = sendToSupabase(data);
+
+                // Wait for both to complete
+                await Promise.all([emailPromise, supabasePromise]);
+
+                console.log('✅ Lead sent to both email and Supabase');
+                return Promise.resolve();
+            } catch (error) {
+                console.error('Error in dual submission:', error);
+                // Even if one fails, we'll continue (partial success is better than total failure)
+                throw error;
+            }
+
         case 'local':
         default:
             // Store in localStorage (for testing)
@@ -261,6 +295,49 @@ async function sendViaFormSubmit(data) {
     }
 
     return response;
+}
+
+// Send to Supabase (database)
+async function sendToSupabase(data) {
+    if (!supabaseClient) {
+        console.warn('⚠️ Supabase client not initialized. Skipping Supabase submission.');
+        return Promise.resolve();
+    }
+
+    try {
+        // Prepare data for Supabase
+        const leadData = {
+            name: data.name,
+            email: data.email === 'Not provided' ? null : data.email,
+            phone: data.phone === 'Not provided' ? null : data.phone,
+            sms_consent: data.sms_consent === 'Yes',
+            use_cases: data.use_cases || null,
+            source: data.source, // 'Early Access Form', 'Developer Waitlist', or 'Contact Form'
+            platform: 'Ghost OS', // Identify which platform this lead came from
+            url: data.url,
+            status: 'new',
+            submitted_at: data.timestamp,
+            created_at: new Date().toISOString()
+        };
+
+        // Insert into Supabase
+        const { data: insertedData, error } = await supabaseClient
+            .from(LEAD_CONFIG.supabaseTable)
+            .insert([leadData])
+            .select();
+
+        if (error) {
+            console.error('Supabase error:', error);
+            throw new Error(`Supabase insert failed: ${error.message}`);
+        }
+
+        console.log('✅ Lead saved to Supabase:', insertedData);
+        return insertedData;
+
+    } catch (error) {
+        console.error('Error sending to Supabase:', error);
+        throw error;
+    }
 }
 
 // === WAVEFORM ANIMATION TRIGGER ===
