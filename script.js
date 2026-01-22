@@ -454,3 +454,46 @@ if (mobileMenuToggle) {
 console.log('%c👻 Ghost OS', 'font-size: 48px; font-weight: bold; color: #8b5cf6;');
 console.log('%cThe Internet Now Has a Voice', 'font-size: 16px; color: #a78bfa;');
 console.log('%cInterested in the API? Email: dev@ghost-os.com', 'font-size: 12px; color: #71717a;');
+
+// === AUTOMATION CAROUSEL ===
+let currentAutomationSlide = 0;
+
+function showAutomationSlide(index) {
+    const slides = document.querySelectorAll('.carousel-slide');
+    const dots = document.querySelectorAll('.carousel-dots .dot');
+
+    if (index >= slides.length) {
+        currentAutomationSlide = 0;
+    } else if (index < 0) {
+        currentAutomationSlide = slides.length - 1;
+    } else {
+        currentAutomationSlide = index;
+    }
+
+    // Hide all slides
+    slides.forEach(slide => {
+        slide.classList.remove('active');
+    });
+
+    // Remove active from all dots
+    dots.forEach(dot => {
+        dot.classList.remove('active');
+    });
+
+    // Show current slide
+    slides[currentAutomationSlide].classList.add('active');
+    dots[currentAutomationSlide].classList.add('active');
+}
+
+function changeAutomationSlide(direction) {
+    showAutomationSlide(currentAutomationSlide + direction);
+}
+
+function goToAutomationSlide(index) {
+    showAutomationSlide(index);
+}
+
+// Auto-advance carousel every 5 seconds
+setInterval(() => {
+    changeAutomationSlide(1);
+}, 5000);

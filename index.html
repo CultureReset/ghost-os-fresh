@@ -217,43 +217,148 @@
                 Connect your tools and create powerful automations with your voice—no code required
             </p>
 
-            <div class="automation-flow">
-                <div class="flow-step">
-                    <div class="flow-icon">💰</div>
-                    <div class="flow-label">Stripe Payment Received</div>
-                </div>
-                <div class="flow-arrow">→</div>
-                <div class="flow-step">
-                    <div class="flow-icon">👻</div>
-                    <div class="flow-label">Ghost OS</div>
-                </div>
-                <div class="flow-arrow">→</div>
-                <div class="flow-step">
-                    <div class="flow-icon">📊</div>
-                    <div class="flow-label">Update QuickBooks</div>
-                </div>
-                <div class="flow-arrow">→</div>
-                <div class="flow-step">
-                    <div class="flow-icon">📱</div>
-                    <div class="flow-label">Send SMS via Twilio</div>
-                </div>
-            </div>
+            <!-- Automation Carousel -->
+            <div class="automation-carousel">
+                <button class="carousel-btn prev-btn" onclick="changeAutomationSlide(-1)">‹</button>
 
-            <div class="automation-examples">
-                <div class="automation-card">
-                    <div class="card-icon">🛒</div>
-                    <h3>E-Commerce Flow</h3>
-                    <p>New Shopify order → Update inventory → Email customer → Notify team on Slack</p>
+                <div class="carousel-slides">
+                    <!-- Slide 1: Payment Flow -->
+                    <div class="carousel-slide active">
+                        <h3 class="slide-title">💳 Payment Flow</h3>
+                        <div class="automation-flow">
+                            <div class="flow-step">
+                                <div class="flow-icon">💰</div>
+                                <div class="flow-label">Stripe Payment</div>
+                            </div>
+                            <div class="flow-arrow">→</div>
+                            <div class="flow-step">
+                                <div class="flow-icon">👻</div>
+                                <div class="flow-label">Ghost OS</div>
+                            </div>
+                            <div class="flow-arrow">→</div>
+                            <div class="flow-step">
+                                <div class="flow-icon">📊</div>
+                                <div class="flow-label">Update QuickBooks</div>
+                            </div>
+                            <div class="flow-arrow">→</div>
+                            <div class="flow-step">
+                                <div class="flow-icon">📱</div>
+                                <div class="flow-label">Send SMS</div>
+                            </div>
+                            <div class="flow-arrow">→</div>
+                            <div class="flow-step">
+                                <div class="flow-icon">📧</div>
+                                <div class="flow-label">Email Receipt</div>
+                            </div>
+                        </div>
+                        <p class="slide-description">Payment received → Update accounting → Generate invoice → Send receipt → Log in spreadsheet</p>
+                    </div>
+
+                    <!-- Slide 2: E-Commerce Flow -->
+                    <div class="carousel-slide">
+                        <h3 class="slide-title">🛒 E-Commerce Flow</h3>
+                        <div class="automation-flow">
+                            <div class="flow-step">
+                                <div class="flow-icon">🛍️</div>
+                                <div class="flow-label">New Order</div>
+                            </div>
+                            <div class="flow-arrow">→</div>
+                            <div class="flow-step">
+                                <div class="flow-icon">👻</div>
+                                <div class="flow-label">Ghost OS</div>
+                            </div>
+                            <div class="flow-arrow">→</div>
+                            <div class="flow-step">
+                                <div class="flow-icon">📦</div>
+                                <div class="flow-label">Update Inventory</div>
+                            </div>
+                            <div class="flow-arrow">→</div>
+                            <div class="flow-step">
+                                <div class="flow-icon">📧</div>
+                                <div class="flow-label">Email Customer</div>
+                            </div>
+                            <div class="flow-arrow">→</div>
+                            <div class="flow-step">
+                                <div class="flow-icon">💬</div>
+                                <div class="flow-label">Notify Slack</div>
+                            </div>
+                        </div>
+                        <p class="slide-description">New Shopify order → Update inventory → Email customer → Notify team on Slack → Track shipping</p>
+                    </div>
+
+                    <!-- Slide 3: Appointment Flow -->
+                    <div class="carousel-slide">
+                        <h3 class="slide-title">📅 Appointment Flow</h3>
+                        <div class="automation-flow">
+                            <div class="flow-step">
+                                <div class="flow-icon">📆</div>
+                                <div class="flow-label">Booking Made</div>
+                            </div>
+                            <div class="flow-arrow">→</div>
+                            <div class="flow-step">
+                                <div class="flow-icon">👻</div>
+                                <div class="flow-label">Ghost OS</div>
+                            </div>
+                            <div class="flow-arrow">→</div>
+                            <div class="flow-step">
+                                <div class="flow-icon">✉️</div>
+                                <div class="flow-label">Send Confirmation</div>
+                            </div>
+                            <div class="flow-arrow">→</div>
+                            <div class="flow-step">
+                                <div class="flow-icon">👤</div>
+                                <div class="flow-label">Add to CRM</div>
+                            </div>
+                            <div class="flow-arrow">→</div>
+                            <div class="flow-step">
+                                <div class="flow-icon">⏰</div>
+                                <div class="flow-label">Set Reminder</div>
+                            </div>
+                        </div>
+                        <p class="slide-description">Calendar booking → Send confirmation → Add to CRM → Set reminder → Update availability automatically</p>
+                    </div>
+
+                    <!-- Slide 4: Email to Action Flow -->
+                    <div class="carousel-slide">
+                        <h3 class="slide-title">📧 Email to Action</h3>
+                        <div class="automation-flow">
+                            <div class="flow-step">
+                                <div class="flow-icon">📬</div>
+                                <div class="flow-label">Email Arrives</div>
+                            </div>
+                            <div class="flow-arrow">→</div>
+                            <div class="flow-step">
+                                <div class="flow-icon">👻</div>
+                                <div class="flow-label">Ghost Reads It</div>
+                            </div>
+                            <div class="flow-arrow">→</div>
+                            <div class="flow-step">
+                                <div class="flow-icon">📅</div>
+                                <div class="flow-label">Add to Calendar</div>
+                            </div>
+                            <div class="flow-arrow">→</div>
+                            <div class="flow-step">
+                                <div class="flow-icon">📱</div>
+                                <div class="flow-label">SMS Reminder</div>
+                            </div>
+                            <div class="flow-arrow">→</div>
+                            <div class="flow-step">
+                                <div class="flow-icon">✅</div>
+                                <div class="flow-label">Done</div>
+                            </div>
+                        </div>
+                        <p class="slide-description">New email → Ghost reads it → Adds event to calendar → Sends you SMS reminder → All automatic</p>
+                    </div>
                 </div>
-                <div class="automation-card">
-                    <div class="card-icon">📅</div>
-                    <h3>Appointment Flow</h3>
-                    <p>Calendar booking → Send confirmation → Add to CRM → Set reminder → Update availability</p>
-                </div>
-                <div class="automation-card">
-                    <div class="card-icon">💳</div>
-                    <h3>Payment Flow</h3>
-                    <p>Payment received → Update accounting → Generate invoice → Send receipt → Log in spreadsheet</p>
+
+                <button class="carousel-btn next-btn" onclick="changeAutomationSlide(1)">›</button>
+
+                <!-- Carousel Dots -->
+                <div class="carousel-dots">
+                    <span class="dot active" onclick="goToAutomationSlide(0)"></span>
+                    <span class="dot" onclick="goToAutomationSlide(1)"></span>
+                    <span class="dot" onclick="goToAutomationSlide(2)"></span>
+                    <span class="dot" onclick="goToAutomationSlide(3)"></span>
                 </div>
             </div>
 
@@ -1149,9 +1254,9 @@
     <!-- How It Works Section -->
     <section id="how-it-works" class="how-it-works">
         <div class="container">
-            <h2 class="section-title">Meet <span class="gradient-text">Ghost OS</span></h2>
+            <h2 class="section-title">How It <span class="gradient-text">Works</span></h2>
             <p class="section-subtitle">
-                Call or text to control everything. Ghost OS sits between you and all your tools.
+                Your verified caller ID connects to Ghost OS, which connects to all your tools
             </p>
 
             <!-- Visual Diagram -->
