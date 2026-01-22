@@ -29,7 +29,20 @@
     --glow-blue: 0 0 20px rgba(59, 130, 246, 0.5);
 
     /* Spacing */
-    --container-width: 1200px;
+    --container-width: 1400px;
+}
+
+/* Large screens optimization */
+@media (min-width: 1920px) {
+    :root {
+        --container-width: 1600px;
+    }
+}
+
+@media (min-width: 2560px) {
+    :root {
+        --container-width: 1800px;
+    }
 }
 
 body {
@@ -513,6 +526,21 @@ section {
     position: relative;
     clear: both;
     overflow: hidden;
+    width: 100%;
+    min-height: auto;
+}
+
+/* Ensure sections fill screen on large displays */
+@media (min-width: 1440px) {
+    section {
+        padding: 4rem 0;
+    }
+}
+
+@media (min-width: 1920px) {
+    section {
+        padding: 5rem 0;
+    }
 }
 
 .section-title {
@@ -2694,4 +2722,67 @@ button.btn-nav {
     .contact-link {
         font-size: 1rem;
     }
+}
+
+/* === LARGE SCREEN OPTIMIZATION (No Gaps) === */
+@media (min-width: 1440px) {
+    .container {
+        padding: 0 4rem;
+    }
+    
+    .hero {
+        min-height: 100vh;
+    }
+    
+    /* Ensure backgrounds extend full width */
+    .for-business,
+    .for-personal,
+    .how-it-works,
+    .tools-section {
+        width: 100%;
+    }
+}
+
+@media (min-width: 1920px) {
+    .container {
+        padding: 0 6rem;
+    }
+    
+    /* Increase spacing for large screens */
+    .hero-headline {
+        font-size: 4rem;
+    }
+    
+    .section-title {
+        font-size: 3.5rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1.35rem;
+    }
+}
+
+@media (min-width: 2560px) {
+    .container {
+        padding: 0 8rem;
+    }
+    
+    .hero-headline {
+        font-size: 4.5rem;
+    }
+    
+    .section-title {
+        font-size: 4rem;
+    }
+}
+
+/* Prevent horizontal gaps */
+body, html {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
 }
