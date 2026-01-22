@@ -2909,3 +2909,36 @@ body, html {
         font-size: 2.75rem !important;
     }
 }
+
+/* === MAKE ALL SECTION TITLES LARGER === */
+.section-title {
+    font-size: 4.5rem !important;
+    font-weight: 900 !important;
+    margin-bottom: 2rem !important;
+}
+
+.section-subtitle {
+    font-size: 1.5rem !important;
+    margin-bottom: 3rem !important;
+}
+
+/* Mobile responsive section titles */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 3rem !important;
+    }
+    
+    .section-subtitle {
+        font-size: 1.25rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 2.25rem !important;
+    }
+    
+    .section-subtitle {
+        font-size: 1.125rem !important;
+    }
+}
