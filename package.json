@@ -1,0 +1,14 @@
+{
+  "name": "ghost-os-fresh",
+  "version": "1.0.0",
+  "description": "Ghost OS - Voice Operating System for Business Management",
+  "private": true,
+  "keywords": [
+    "voice",
+    "ai",
+    "business",
+    "voice-assistant"
+  ],
+  "author": "CyberCheck Inc.",
+  "license": "MIT"
+}

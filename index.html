@@ -1,0 +1,1537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghost OS - The Internet Now Has a Voice</title>
+    <meta name="description" content="Give your business a voice assistant that talks to all your tools and lets them talk to each other.">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y8DH4VS3LV"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-Y8DH4VS3LV');
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="header-logo">
+                <span class="logo-text">Ghost OS</span>
+            </div>
+            <nav class="header-nav">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#for-business" class="nav-link">Business</a>
+                <a href="#for-personal" class="nav-link">Personal</a>
+                <a href="#how-it-works" class="nav-link">How It Works</a>
+                <button class="nav-link btn-nav open-dev-modal">Developer</button>
+                <button class="nav-link btn-nav open-modal">Get Access</button>
+            </nav>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <!-- Top Tagline Over Image -->
+        <div class="hero-top-tagline">
+            It's the voice operating system of the internet
+        </div>
+
+        <!-- Patent Pending Badge -->
+        <div class="patent-badge-wrapper">
+            <div class="patent-badge">
+                PATENT PENDING
+            </div>
+        </div>
+
+        <!-- Ghost Logo Floating Above Earth -->
+        <div class="ghost-container">
+            <img src="IMG_8832.JPG" alt="Ghost OS Logo" class="ghost-logo">
+        </div>
+
+        <!-- Content -->
+        <div class="container">
+            <div class="hero-spacing"></div>
+
+            <h2 class="hero-headline">
+                Give the Internet <span class="gradient-text">a Voice</span>
+            </h2>
+
+            <p class="hero-subtitle">
+                Control any apps, tools, smart devices... any with an API or OAuth.<br>
+                Your tools can now talk to each other.<br>
+                The future is here.
+            </p>
+
+            <!-- Voice Waveform Animation -->
+            <div class="waveform">
+                <div class="wave"></div>
+                <div class="wave"></div>
+                <div class="wave"></div>
+                <div class="wave"></div>
+                <div class="wave"></div>
+            </div>
+
+            <div class="hero-cta">
+                <button class="btn btn-primary open-modal">Request Early Access</button>
+                <a href="#how-it-works" class="btn btn-secondary">See How It Works ↓</a>
+            </div>
+        </div>
+
+        <!-- Tagline -->
+        <div style="text-align: center; width: 100%;">
+            <p class="hero-tagline">The Voice on Top of the WWW</p>
+        </div>
+
+        <!-- About Section -->
+        <div class="container" style="margin-top: 80px;">
+            <h2 class="section-title">ABOUT <span class="gradient-text">GHOST OS</span></h2>
+            <div style="max-width: 900px; margin: 0 auto; text-align: left; font-size: 1.1rem; line-height: 1.8; color: #e0e0e0;">
+                <div id="about-preview">
+                    <p style="margin-bottom: 1.5rem;">
+                        Ghost OS is the voice operating system that sits above the tools you already use.
+                    </p>
+                    <p style="margin-bottom: 1.5rem;">
+                        Most people don't have a "tool problem." They have a disconnected world problem—too many logins, too many dashboards, too many systems that don't talk to each other. You end up doing the work software was supposed to do: copying data, switching apps, hunting for answers, and manually triggering actions.
+                    </p>
+                    <p style="margin-bottom: 1.5rem;">
+                        Ghost OS flips that.
+                    </p>
+                    <p style="margin-bottom: 1.5rem;">
+                        Instead of navigating software, you request outcomes. Instead of living in one ecosystem, your tools connect across ecosystems. Instead of passwords and friction, access is built around phone-first identity and verification.
+                    </p>
+                </div>
+                <div id="about-full" style="display: none;">
+                    <p style="margin-bottom: 1.5rem;">
+                        Ghost OS is built for anyone running a world—individuals, creators, teams, and businesses. If a platform has a secure way to connect (API / integration), Ghost OS is designed to speak to it.
+                    </p>
+                    <p style="margin-bottom: 1.5rem;">
+                        And the core principle is simple:
+                    </p>
+                    <p style="margin-bottom: 1.5rem; font-weight: 600;">
+                        Transparency is key.
+                    </p>
+                    <p style="margin-bottom: 1.5rem;">
+                        Ghost OS is designed to show what it did, what it touched, what it sent, and what permissions were used—so the system stays controllable, not mysterious.
+                    </p>
+                </div>
+                <div style="text-align: center; margin-top: 2rem;">
+                    <button id="read-more-btn" class="btn btn-secondary" onclick="toggleAbout()">Read More</button>
+                </div>
+            </div>
+        </div>
+
+        <script>
+        function toggleAbout() {
+            const fullText = document.getElementById('about-full');
+            const btn = document.getElementById('read-more-btn');
+
+            if (fullText.style.display === 'none') {
+                fullText.style.display = 'block';
+                btn.textContent = 'Read Less';
+            } else {
+                fullText.style.display = 'none';
+                btn.textContent = 'Read More';
+            }
+        }
+        </script>
+    </section>
+
+    <!-- For Business Section -->
+    <section id="for-business" class="for-business">
+        <div class="container">
+            <h2 class="section-title">For Your <span class="gradient-text">Business</span></h2>
+            <p class="section-subtitle">
+                Run your entire business by voice.<br>
+                Talk to Shopify, Stripe, QuickBooks, Toast, and thousands more tools.<br>
+                They all work together automatically.
+            </p>
+
+            <!-- Brand Logos Showcase - Horizontal Scroll -->
+            <!-- To add real logos: Replace <i> tags with <img src="path/to/logo.png" alt="Brand Name"> -->
+            <div class="brand-logos">
+                <div class="brand-logo">
+                    <i class="fab fa-shopify"></i>
+                    <!-- <img src="logos/shopify.png" alt="Shopify"> -->
+                    <span>Shopify</span>
+                </div>
+                <div class="brand-logo">
+                    <i class="fab fa-stripe"></i>
+                    <!-- <img src="logos/stripe.png" alt="Stripe"> -->
+                    <span>Stripe</span>
+                </div>
+                <div class="brand-logo">
+                    <i class="fas fa-calculator"></i>
+                    <!-- <img src="logos/quickbooks.png" alt="QuickBooks"> -->
+                    <span>QuickBooks</span>
+                </div>
+                <div class="brand-logo">
+                    <i class="fas fa-utensils"></i>
+                    <!-- <img src="logos/toast.png" alt="Toast"> -->
+                    <span>Toast</span>
+                </div>
+                <div class="brand-logo">
+                    <i class="fab fa-square"></i>
+                    <!-- <img src="logos/square.png" alt="Square"> -->
+                    <span>Square</span>
+                </div>
+                <div class="brand-logo">
+                    <i class="fab fa-salesforce"></i>
+                    <!-- <img src="logos/salesforce.png" alt="Salesforce"> -->
+                    <span>Salesforce</span>
+                </div>
+                <div class="brand-logo">
+                    <i class="fab fa-mailchimp"></i>
+                    <!-- <img src="logos/mailchimp.png" alt="Mailchimp"> -->
+                    <span>Mailchimp</span>
+                </div>
+                <div class="brand-logo">
+                    <i class="fab fa-paypal"></i>
+                    <!-- <img src="logos/paypal.png" alt="PayPal"> -->
+                    <span>PayPal</span>
+                </div>
+                <div class="brand-logo">
+                    <i class="fab fa-google"></i>
+                    <!-- <img src="logos/google.png" alt="Google"> -->
+                    <span>Google</span>
+                </div>
+                <div class="brand-logo">
+                    <i class="fab fa-slack"></i>
+                    <!-- <img src="logos/slack.png" alt="Slack"> -->
+                    <span>Slack</span>
+                </div>
+                <div class="brand-logo">
+                    <i class="fab fa-hubspot"></i>
+                    <!-- <img src="logos/hubspot.png" alt="HubSpot"> -->
+                    <span>HubSpot</span>
+                </div>
+                <div class="brand-logo">
+                    <i class="fab fa-amazon"></i>
+                    <!-- <img src="logos/amazon.png" alt="Amazon"> -->
+                    <span>Amazon</span>
+                </div>
+                <!-- Add more logos here by copying the structure above -->
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <button class="btn btn-primary btn-large open-modal">Get Early Access Now</button>
+                <p style="margin-top: 1rem; color: var(--text-secondary); font-size: 0.875rem;">Join businesses already using voice control</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Full Screen Home Showcase -->
+    <section class="home-showcase-hero">
+        <div class="container">
+            <h2 class="section-title">Meet the <span class="gradient-text">Ghost OS</span> Dashboard</h2>
+            <p class="section-subtitle">
+                Your central command center for everything
+            </p>
+        </div>
+
+        <div class="container" style="text-align: center; margin-top: 2rem;">
+            <p style="font-size: 1.125rem; color: var(--text-secondary);">
+                One dashboard. All your tools. Complete voice control.
+            </p>
+        </div>
+    </section>
+
+    <!-- Text Ghost OS Section -->
+    <section class="text-ghost-section">
+        <div class="container">
+            <h2 class="section-title">Text <span class="gradient-text">Ghost OS</span> Anytime</h2>
+            <p class="section-subtitle">
+                Can't talk? Just text. Ghost OS responds instantly.<br>
+                Ask questions, give commands, get updates — all via SMS.
+            </p>
+
+            <div class="phones-showcase">
+                <!-- Phone 1: Business Questions -->
+                <div class="phone-mockup">
+                    <div class="phone-frame">
+                        <div class="phone-notch"></div>
+                        <div class="phone-screen">
+                            <div class="phone-header">
+                                <div class="phone-time">9:41 AM</div>
+                                <div class="phone-contact">
+                                    <span class="contact-avatar">👻</span>
+                                    <span class="contact-name">Ghost OS</span>
+                                </div>
+                            </div>
+                            <div class="phone-messages">
+                                <div class="text-message sent">
+                                    <div class="text-bubble">What's my Shopify revenue today?</div>
+                                    <div class="text-time">9:38 AM</div>
+                                </div>
+                                <div class="text-message received">
+                                    <div class="text-bubble">
+                                        Your Shopify revenue today is $3,247.50 from 47 orders.
+                                        <br><br>
+                                        Top seller: Classic Burger ($892)<br>
+                                        Average order: $69.10
+                                    </div>
+                                    <div class="text-time">9:38 AM</div>
+                                </div>
+                                <div class="text-message sent">
+                                    <div class="text-bubble">How does that compare to yesterday?</div>
+                                    <div class="text-time">9:39 AM</div>
+                                </div>
+                                <div class="text-message received">
+                                    <div class="text-bubble">
+                                        Up 23% from yesterday ($2,639)! 🎉<br>
+                                        Great day!
+                                    </div>
+                                    <div class="text-time">9:39 AM</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="phone-label">Business Insights</div>
+                </div>
+
+                <!-- Phone 2: Quick Commands -->
+                <div class="phone-mockup">
+                    <div class="phone-frame">
+                        <div class="phone-notch"></div>
+                        <div class="phone-screen">
+                            <div class="phone-header">
+                                <div class="phone-time">2:15 PM</div>
+                                <div class="phone-contact">
+                                    <span class="contact-avatar">👻</span>
+                                    <span class="contact-name">Ghost OS</span>
+                                </div>
+                            </div>
+                            <div class="phone-messages">
+                                <div class="text-message sent">
+                                    <div class="text-bubble">Send invoice to john@email.com for $500</div>
+                                    <div class="text-time">2:12 PM</div>
+                                </div>
+                                <div class="text-message received">
+                                    <div class="text-bubble">
+                                        Invoice sent via QuickBooks! ✓<br>
+                                        Invoice #1847 for $500.00<br>
+                                        Sent to: john@email.com
+                                    </div>
+                                    <div class="text-time">2:12 PM</div>
+                                </div>
+                                <div class="text-message sent">
+                                    <div class="text-bubble">Add it to my calendar for follow-up in 7 days</div>
+                                    <div class="text-time">2:14 PM</div>
+                                </div>
+                                <div class="text-message received">
+                                    <div class="text-bubble">
+                                        Done! Added reminder for Jan 28 at 2:00 PM:<br>
+                                        "Follow up on invoice #1847"
+                                    </div>
+                                    <div class="text-time">2:14 PM</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="phone-label">Quick Commands</div>
+                </div>
+
+                <!-- Phone 3: Alerts & Updates -->
+                <div class="phone-mockup">
+                    <div class="phone-frame">
+                        <div class="phone-notch"></div>
+                        <div class="phone-screen">
+                            <div class="phone-header">
+                                <div class="phone-time">5:32 PM</div>
+                                <div class="phone-contact">
+                                    <span class="contact-avatar">👻</span>
+                                    <span class="contact-name">Ghost OS</span>
+                                </div>
+                            </div>
+                            <div class="phone-messages">
+                                <div class="text-message received">
+                                    <div class="text-bubble">
+                                        🔔 New order alert!<br><br>
+                                        Order #892 • $67.50<br>
+                                        Customer: Sarah M.<br>
+                                        Items: 2x Veggie Burger, Fries<br>
+                                        Delivery: 6:15 PM
+                                    </div>
+                                    <div class="text-time">5:30 PM</div>
+                                </div>
+                                <div class="text-message sent">
+                                    <div class="text-bubble">Can we make it by 6:15?</div>
+                                    <div class="text-time">5:31 PM</div>
+                                </div>
+                                <div class="text-message received">
+                                    <div class="text-bubble">
+                                        Yes! Kitchen confirmed.<br>
+                                        Prep time: 15 min<br>
+                                        Driver ready at 5:50 PM ✓
+                                    </div>
+                                    <div class="text-time">5:31 PM</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="phone-label">Real-Time Alerts</div>
+                </div>
+
+                <!-- Phone 4: Inventory Check -->
+                <div class="phone-mockup">
+                    <div class="phone-frame">
+                        <div class="phone-notch"></div>
+                        <div class="phone-screen">
+                            <div class="phone-header">
+                                <div class="phone-time">11:22 AM</div>
+                                <div class="phone-contact">
+                                    <span class="contact-avatar">👻</span>
+                                    <span class="contact-name">Ghost OS</span>
+                                </div>
+                            </div>
+                            <div class="phone-messages">
+                                <div class="text-message sent">
+                                    <div class="text-bubble">Check my inventory for French Roast coffee</div>
+                                    <div class="text-time">11:20 AM</div>
+                                </div>
+                                <div class="text-message received">
+                                    <div class="text-bubble">
+                                        French Roast Coffee:<br><br>
+                                        Current stock: 8 bags<br>
+                                        Low stock alert! ⚠️<br>
+                                        Reorder point: 10 bags<br><br>
+                                        Would you like me to reorder?
+                                    </div>
+                                    <div class="text-time">11:20 AM</div>
+                                </div>
+                                <div class="text-message sent">
+                                    <div class="text-bubble">Yes, order 20 bags</div>
+                                    <div class="text-time">11:21 AM</div>
+                                </div>
+                                <div class="text-message received">
+                                    <div class="text-bubble">
+                                        Order placed! ✓<br>
+                                        Supplier: Coffee Co<br>
+                                        Quantity: 20 bags<br>
+                                        Total: $240.00<br>
+                                        Delivery: Jan 25
+                                    </div>
+                                    <div class="text-time">11:22 AM</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="phone-label">Inventory Management</div>
+                </div>
+
+                <!-- Phone 5: Customer Follow-up -->
+                <div class="phone-mockup">
+                    <div class="phone-frame">
+                        <div class="phone-notch"></div>
+                        <div class="phone-screen">
+                            <div class="phone-header">
+                                <div class="phone-time">3:45 PM</div>
+                                <div class="phone-contact">
+                                    <span class="contact-avatar">👻</span>
+                                    <span class="contact-name">Ghost OS</span>
+                                </div>
+                            </div>
+                            <div class="phone-messages">
+                                <div class="text-message sent">
+                                    <div class="text-bubble">Send a thank you email to all customers who ordered this week</div>
+                                    <div class="text-time">3:42 PM</div>
+                                </div>
+                                <div class="text-message received">
+                                    <div class="text-bubble">
+                                        Found 47 customers from this week.<br><br>
+                                        Should I include a 10% discount code for their next order?
+                                    </div>
+                                    <div class="text-time">3:43 PM</div>
+                                </div>
+                                <div class="text-message sent">
+                                    <div class="text-bubble">Yes! Code: THANKS10</div>
+                                    <div class="text-time">3:44 PM</div>
+                                </div>
+                                <div class="text-message received">
+                                    <div class="text-bubble">
+                                        Perfect! 📧<br><br>
+                                        Emails sent: 47/47<br>
+                                        Discount code: THANKS10<br>
+                                        Valid until: Jan 31
+                                    </div>
+                                    <div class="text-time">3:45 PM</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="phone-label">Customer Engagement</div>
+                </div>
+
+                <!-- Phone 6: Schedule Management -->
+                <div class="phone-mockup">
+                    <div class="phone-frame">
+                        <div class="phone-notch"></div>
+                        <div class="phone-screen">
+                            <div class="phone-header">
+                                <div class="phone-time">8:30 AM</div>
+                                <div class="phone-contact">
+                                    <span class="contact-avatar">👻</span>
+                                    <span class="contact-name">Ghost OS</span>
+                                </div>
+                            </div>
+                            <div class="phone-messages">
+                                <div class="text-message sent">
+                                    <div class="text-bubble">What's on my schedule today?</div>
+                                    <div class="text-time">8:28 AM</div>
+                                </div>
+                                <div class="text-message received">
+                                    <div class="text-bubble">
+                                        Here's your schedule for today:<br><br>
+                                        📅 9:00 AM - Team Meeting<br>
+                                        📅 11:30 AM - Client Call (ABC Corp)<br>
+                                        📅 2:00 PM - Product Demo<br>
+                                        📅 4:30 PM - Review Invoices<br><br>
+                                        You have 3 unread emails.
+                                    </div>
+                                    <div class="text-time">8:28 AM</div>
+                                </div>
+                                <div class="text-message sent">
+                                    <div class="text-bubble">Remind me 10 minutes before each meeting</div>
+                                    <div class="text-time">8:29 AM</div>
+                                </div>
+                                <div class="text-message received">
+                                    <div class="text-bubble">
+                                        Reminders set! ⏰<br>
+                                        I'll text you before each meeting.
+                                    </div>
+                                    <div class="text-time">8:30 AM</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="phone-label">Daily Planning</div>
+                </div>
+
+                <!-- Phone 7: Financial Summary -->
+                <div class="phone-mockup">
+                    <div class="phone-frame">
+                        <div class="phone-notch"></div>
+                        <div class="phone-screen">
+                            <div class="phone-header">
+                                <div class="phone-time">6:15 PM</div>
+                                <div class="phone-contact">
+                                    <span class="contact-avatar">👻</span>
+                                    <span class="contact-name">Ghost OS</span>
+                                </div>
+                            </div>
+                            <div class="phone-messages">
+                                <div class="text-message sent">
+                                    <div class="text-bubble">How much did I make this month?</div>
+                                    <div class="text-time">6:13 PM</div>
+                                </div>
+                                <div class="text-message received">
+                                    <div class="text-bubble">
+                                        January Revenue Summary:<br><br>
+                                        💰 Total: $47,892<br>
+                                        📈 Up 34% from December<br>
+                                        🛍️ Orders: 342<br>
+                                        💳 Avg order: $140<br><br>
+                                        Top product: Premium Bundle ($8.2K)
+                                    </div>
+                                    <div class="text-time">6:14 PM</div>
+                                </div>
+                                <div class="text-message sent">
+                                    <div class="text-bubble">Show me expenses</div>
+                                    <div class="text-time">6:14 PM</div>
+                                </div>
+                                <div class="text-message received">
+                                    <div class="text-bubble">
+                                        January Expenses:<br><br>
+                                        💼 Total: $12,450<br>
+                                        📦 Inventory: $7,200<br>
+                                        🏢 Overhead: $3,500<br>
+                                        📱 Software: $1,750<br><br>
+                                        Net profit: $35,442 🎉
+                                    </div>
+                                    <div class="text-time">6:15 PM</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="phone-label">Financial Insights</div>
+                </div>
+
+                <!-- Phone 8: Smart Automation -->
+                <div class="phone-mockup">
+                    <div class="phone-frame">
+                        <div class="phone-notch"></div>
+                        <div class="phone-screen">
+                            <div class="phone-header">
+                                <div class="phone-time">10:05 AM</div>
+                                <div class="phone-contact">
+                                    <span class="contact-avatar">👻</span>
+                                    <span class="contact-name">Ghost OS</span>
+                                </div>
+                            </div>
+                            <div class="phone-messages">
+                                <div class="text-message received">
+                                    <div class="text-bubble">
+                                        🔔 Heads up!<br><br>
+                                        Customer Jane Smith just left a 5-star review on your latest product! ⭐⭐⭐⭐⭐<br><br>
+                                        Should I send her a thank you email?
+                                    </div>
+                                    <div class="text-time">10:03 AM</div>
+                                </div>
+                                <div class="text-message sent">
+                                    <div class="text-bubble">Yes! Include a 15% off coupon</div>
+                                    <div class="text-time">10:04 AM</div>
+                                </div>
+                                <div class="text-message received">
+                                    <div class="text-bubble">
+                                        Done! ✓<br><br>
+                                        Thank you email sent with coupon code STAR15.<br><br>
+                                        Also posted her review to your social media 📱
+                                    </div>
+                                    <div class="text-time">10:05 AM</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="phone-label">Smart Notifications</div>
+                </div>
+            </div>
+
+            <div class="text-feature-callout">
+                <h3>📱 Works with Any Phone</h3>
+                <p>No app required. Just text Ghost OS like you'd text a friend. It works with iPhone, Android, or any phone with SMS.</p>
+                <button class="btn btn-primary btn-large open-modal" style="margin-top: 1.5rem;">Start Texting Ghost OS</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- For Personal Section -->
+    <section id="for-personal" class="for-personal">
+        <div class="container">
+            <h2 class="section-title">For Your <span class="gradient-text">Personal Life</span></h2>
+            <p class="section-subtitle">
+                Call or text Ghost to control your personal life.<br>
+                Smart home, calendar, banking, fitness — all by voice or SMS.
+            </p>
+
+            <div class="phones-showcase">
+                <!-- Phone 1: Smart Home Control -->
+                <div class="phone-mockup">
+                    <div class="phone-frame">
+                        <div class="phone-notch"></div>
+                        <div class="phone-screen">
+                            <div class="phone-header">
+                                <div class="phone-time">7:15 PM</div>
+                                <div class="phone-contact">
+                                    <span class="contact-avatar">👻</span>
+                                    <span class="contact-name">Ghost OS</span>
+                                </div>
+                            </div>
+                            <div class="phone-messages">
+                                <div class="text-message sent">
+                                    <div class="text-bubble">Turn on living room lights</div>
+                                    <div class="text-time">7:14 PM</div>
+                                </div>
+                                <div class="text-message received">
+                                    <div class="text-bubble">
+                                        💡 Living room lights ON<br>
+                                        Brightness: 80%
+                                    </div>
+                                    <div class="text-time">7:14 PM</div>
+                                </div>
+                                <div class="text-message sent">
+                                    <div class="text-bubble">Set temperature to 72</div>
+                                    <div class="text-time">7:15 PM</div>
+                                </div>
+                                <div class="text-message received">
+                                    <div class="text-bubble">
+                                        🌡️ Thermostat set to 72°F<br>
+                                        Current: 68°F<br>
+                                        Heating now...
+                                    </div>
+                                    <div class="text-time">7:15 PM</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="phone-label">🏠 Smart Home</div>
+                </div>
+
+                <!-- Phone 2: Calendar & Schedule -->
+                <div class="phone-mockup">
+                    <div class="phone-frame">
+                        <div class="phone-notch"></div>
+                        <div class="phone-screen">
+                            <div class="phone-header">
+                                <div class="phone-time">8:45 AM</div>
+                                <div class="phone-contact">
+                                    <span class="contact-avatar">👻</span>
+                                    <span class="contact-name">Ghost OS</span>
+                                </div>
+                            </div>
+                            <div class="phone-messages">
+                                <div class="text-message sent">
+                                    <div class="text-bubble">What's on my schedule today?</div>
+                                    <div class="text-time">8:43 AM</div>
+                                </div>
+                                <div class="text-message received">
+                                    <div class="text-bubble">
+                                        📅 Today's Schedule:<br><br>
+                                        10:00 AM - Dentist<br>
+                                        12:30 PM - Lunch with Sarah<br>
+                                        3:00 PM - Gym<br>
+                                        7:00 PM - Dinner reservation
+                                    </div>
+                                    <div class="text-time">8:43 AM</div>
+                                </div>
+                                <div class="text-message sent">
+                                    <div class="text-bubble">Add haircut tomorrow at 2pm</div>
+                                    <div class="text-time">8:44 AM</div>
+                                </div>
+                                <div class="text-message received">
+                                    <div class="text-bubble">
+                                        ✓ Added to calendar:<br>
+                                        Tomorrow, 2:00 PM - Haircut
+                                    </div>
+                                    <div class="text-time">8:45 AM</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="phone-label">📅 Calendar</div>
+                </div>
+
+                <!-- Phone 3: Personal Finance -->
+                <div class="phone-mockup">
+                    <div class="phone-frame">
+                        <div class="phone-notch"></div>
+                        <div class="phone-screen">
+                            <div class="phone-header">
+                                <div class="phone-time">4:20 PM</div>
+                                <div class="phone-contact">
+                                    <span class="contact-avatar">👻</span>
+                                    <span class="contact-name">Ghost OS</span>
+                                </div>
+                            </div>
+                            <div class="phone-messages">
+                                <div class="text-message sent">
+                                    <div class="text-bubble">What's my bank balance?</div>
+                                    <div class="text-time">4:18 PM</div>
+                                </div>
+                                <div class="text-message received">
+                                    <div class="text-bubble">
+                                        💰 Checking Account:<br>
+                                        Balance: $4,287.50<br><br>
+                                        💳 Credit Card:<br>
+                                        Balance: $892.30<br>
+                                        Due: Jan 28
+                                    </div>
+                                    <div class="text-time">4:18 PM</div>
+                                </div>
+                                <div class="text-message sent">
+                                    <div class="text-bubble">Pay my credit card</div>
+                                    <div class="text-time">4:19 PM</div>
+                                </div>
+                                <div class="text-message received">
+                                    <div class="text-bubble">
+                                        ✓ Payment scheduled!<br>
+                                        Amount: $892.30<br>
+                                        From: Checking<br>
+                                        Date: Tomorrow
+                                    </div>
+                                    <div class="text-time">4:20 PM</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="phone-label">💰 Banking</div>
+                </div>
+
+                <!-- Phone 4: Fitness Tracking -->
+                <div class="phone-mockup">
+                    <div class="phone-frame">
+                        <div class="phone-notch"></div>
+                        <div class="phone-screen">
+                            <div class="phone-header">
+                                <div class="phone-time">6:30 PM</div>
+                                <div class="phone-contact">
+                                    <span class="contact-avatar">👻</span>
+                                    <span class="contact-name">Ghost OS</span>
+                                </div>
+                            </div>
+                            <div class="phone-messages">
+                                <div class="text-message sent">
+                                    <div class="text-bubble">Log my workout</div>
+                                    <div class="text-time">6:28 PM</div>
+                                </div>
+                                <div class="text-message received">
+                                    <div class="text-bubble">
+                                        What type of workout?<br>
+                                        (Running, Gym, Cycling, Yoga, etc.)
+                                    </div>
+                                    <div class="text-time">6:28 PM</div>
+                                </div>
+                                <div class="text-message sent">
+                                    <div class="text-bubble">Gym - 45 minutes</div>
+                                    <div class="text-time">6:29 PM</div>
+                                </div>
+                                <div class="text-message received">
+                                    <div class="text-bubble">
+                                        💪 Workout logged!<br><br>
+                                        Type: Gym<br>
+                                        Duration: 45 min<br>
+                                        Calories: ~350<br><br>
+                                        Weekly streak: 4 days 🔥
+                                    </div>
+                                    <div class="text-time">6:30 PM</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="phone-label">💪 Fitness</div>
+                </div>
+
+                <!-- Phone 5: Music & Entertainment -->
+                <div class="phone-mockup">
+                    <div class="phone-frame">
+                        <div class="phone-notch"></div>
+                        <div class="phone-screen">
+                            <div class="phone-header">
+                                <div class="phone-time">9:15 PM</div>
+                                <div class="phone-contact">
+                                    <span class="contact-avatar">👻</span>
+                                    <span class="contact-name">Ghost OS</span>
+                                </div>
+                            </div>
+                            <div class="phone-messages">
+                                <div class="text-message sent">
+                                    <div class="text-bubble">Play my chill playlist on Spotify</div>
+                                    <div class="text-time">9:14 PM</div>
+                                </div>
+                                <div class="text-message received">
+                                    <div class="text-bubble">
+                                        🎵 Now playing on Spotify:<br>
+                                        "Chill Vibes" playlist<br><br>
+                                        Current: "Ocean Eyes"<br>
+                                        Artist: Billie Eilish
+                                    </div>
+                                    <div class="text-time">9:14 PM</div>
+                                </div>
+                                <div class="text-message sent">
+                                    <div class="text-bubble">Order pizza from my favorite place</div>
+                                    <div class="text-time">9:15 PM</div>
+                                </div>
+                                <div class="text-message received">
+                                    <div class="text-bubble">
+                                        🍕 Ordering from Tony's Pizza<br><br>
+                                        Your usual: Large pepperoni<br>
+                                        Total: $18.50<br>
+                                        ETA: 30 minutes
+                                    </div>
+                                    <div class="text-time">9:15 PM</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="phone-label">🎵 Entertainment</div>
+                </div>
+            </div>
+
+            <div class="text-feature-callout">
+                <h3>🎤 Call Ghost Anytime</h3>
+                <p>Too busy to text? Just call Ghost OS and talk. Control everything hands-free while driving, cooking, or working out.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">Meet <span class="gradient-text">Ghost OS</span></h2>
+            <p class="section-subtitle">
+                Call or text to control everything. Ghost OS sits between you and all your tools.
+            </p>
+
+            <!-- Visual Diagram -->
+            <div class="architecture-diagram">
+                <div class="arch-top">
+                    <div class="arch-node you-node">
+                        <span class="node-icon">🎤 📱</span>
+                        <span class="node-label">Call or Text</span>
+                    </div>
+                </div>
+
+                <div class="arch-middle">
+                    <div class="arch-node ghost-node">
+                        <span class="node-icon">👻</span>
+                        <span class="node-label">Ghost OS</span>
+                        <div class="pulse-ring"></div>
+                    </div>
+                </div>
+
+                <div class="arch-bottom">
+                    <div class="arch-node tool-node">
+                        <span class="node-icon">🛍️</span>
+                        <span class="node-label">Shopify</span>
+                    </div>
+                    <div class="arch-node tool-node">
+                        <span class="node-icon">💳</span>
+                        <span class="node-label">Stripe</span>
+                    </div>
+                    <div class="arch-node tool-node">
+                        <span class="node-icon">📱</span>
+                        <span class="node-label">SMS</span>
+                    </div>
+                    <div class="arch-node tool-node">
+                        <span class="node-icon">🍽️</span>
+                        <span class="node-label">Toast</span>
+                    </div>
+                </div>
+
+                <div class="arch-connections">
+                    <svg class="connection-svg">
+                        <!-- Connections will be drawn by JS -->
+                    </svg>
+                </div>
+            </div>
+
+            <div class="how-it-works-text">
+                <div class="feature-card">
+                    <div class="feature-icon">🎤</div>
+                    <h3>Voice Control Everything</h3>
+                    <p>Talk to your business while driving, cooking, or working out. No screen needed.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3>Tools Talk to Each Other</h3>
+                    <p>Shopify tells Stripe to charge. Stripe tells SMS to confirm. All automatic.</p>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <button class="btn btn-primary btn-large open-modal">Ready to Get Started?</button>
+                <p style="margin-top: 1rem; color: var(--text-secondary); font-size: 0.875rem;">Setup takes less than 5 minutes</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Examples Section -->
+    <section id="examples" class="examples">
+        <div class="container">
+            <h2 class="section-title">See <span class="gradient-text">Ghost OS</span> in Action</h2>
+
+            <!-- Example 1: Voice Control -->
+            <div class="example-card">
+                <div class="example-header">
+                    <span class="example-number">01</span>
+                    <h3>Voice Control</h3>
+                </div>
+                <div class="example-content">
+                    <div class="example-conversation">
+                        <div class="message user-message">
+                            <span class="message-icon">👤</span>
+                            <div class="message-content">
+                                <div class="message-text">"Hey Ghost, how many sales today?"</div>
+                            </div>
+                        </div>
+                        <div class="message ghost-message">
+                            <span class="message-icon">👻</span>
+                            <div class="message-content">
+                                <div class="message-text">"You made $1,247 from 23 orders today. Your best seller is the Classic Burger."</div>
+                                <div class="message-meta">All while you're driving</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Example 2: Automation -->
+            <div class="example-card">
+                <div class="example-header">
+                    <span class="example-number">02</span>
+                    <h3>Automatic Tool Orchestration</h3>
+                </div>
+                <div class="example-content">
+                    <div class="automation-flow">
+                        <div class="flow-trigger">
+                            <div class="flow-icon">🛒</div>
+                            <div class="flow-text">New Shopify Order</div>
+                        </div>
+                        <div class="flow-arrow">↓</div>
+                        <div class="flow-ghost">
+                            <div class="flow-icon">👻</div>
+                            <div class="flow-text">Ghost OS Takes Over</div>
+                        </div>
+                        <div class="flow-arrow">↓</div>
+                        <div class="flow-actions">
+                            <div class="flow-action">
+                                <span class="action-icon">💳</span>
+                                <span class="action-text">Charges card via Stripe</span>
+                            </div>
+                            <div class="flow-action">
+                                <span class="action-icon">📱</span>
+                                <span class="action-text">Sends SMS confirmation</span>
+                            </div>
+                            <div class="flow-action">
+                                <span class="action-icon">📦</span>
+                                <span class="action-text">Updates inventory</span>
+                            </div>
+                            <div class="flow-action">
+                                <span class="action-icon">🖨️</span>
+                                <span class="action-text">Prints receipt on Toast POS</span>
+                            </div>
+                        </div>
+                        <div class="flow-result">
+                            <strong>You did nothing. Ghost handled it all.</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Example 3: Cross-Tool Intelligence -->
+            <div class="example-card">
+                <div class="example-header">
+                    <span class="example-number">03</span>
+                    <h3>Cross-Tool Intelligence</h3>
+                </div>
+                <div class="example-content">
+                    <div class="example-conversation">
+                        <div class="message user-message">
+                            <span class="message-icon">👤</span>
+                            <div class="message-content">
+                                <div class="message-text">"Send a 20% discount to my best customers"</div>
+                            </div>
+                        </div>
+                        <div class="message ghost-message">
+                            <span class="message-icon">👻</span>
+                            <div class="message-content">
+                                <div class="message-process">
+                                    <div class="process-step">
+                                        <span class="process-icon">🛍️</span>
+                                        <span class="process-text">Asked Shopify: "Who are top 10 customers?"</span>
+                                    </div>
+                                    <div class="process-step">
+                                        <span class="process-icon">💳</span>
+                                        <span class="process-text">Asked Stripe: "Create 20% discount code"</span>
+                                    </div>
+                                    <div class="process-step">
+                                        <span class="process-icon">📧</span>
+                                        <span class="process-text">Asked Mailchimp: "Send them the code"</span>
+                                    </div>
+                                </div>
+                                <div class="message-text">"Done! Sent code 'VIP20' to 10 customers via email."</div>
+                                <div class="message-meta">One command. Three tools working together.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Example 4: Real-time Updates -->
+            <div class="example-card">
+                <div class="example-header">
+                    <span class="example-number">04</span>
+                    <h3>Real-Time Notifications</h3>
+                </div>
+                <div class="example-content">
+                    <div class="example-conversation">
+                        <div class="message ghost-message">
+                            <span class="message-icon">👻</span>
+                            <div class="message-content">
+                                <div class="message-text">"You just got a new order! Order #847 for $52.99. Would you like me to read the details?"</div>
+                                <div class="message-meta">Ghost interrupts your current call with urgent updates</div>
+                            </div>
+                        </div>
+                        <div class="message user-message">
+                            <span class="message-icon">👤</span>
+                            <div class="message-content">
+                                <div class="message-text">"Yes, what did they order?"</div>
+                            </div>
+                        </div>
+                        <div class="message ghost-message">
+                            <span class="message-icon">👻</span>
+                            <div class="message-content">
+                                <div class="message-text">"Two pepperoni pizzas and a Caesar salad. Delivery to 123 Main St. Estimated delivery time: 45 minutes."</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools Section -->
+    <section class="tools-section">
+        <div class="container">
+            <h2 class="section-title">Works With All Your <span class="gradient-text">Favorite Tools</span></h2>
+            <p class="section-subtitle">
+                Ghost OS speaks the language of thousands of business tools<br>
+                and makes them speak to each other
+            </p>
+
+            <div class="tools-grid">
+                <!-- E-Commerce -->
+                <div class="tool-category">
+                    <h4 class="category-title">E-Commerce</h4>
+                    <div class="tool-items">
+                        <div class="tool-item">
+                            <i class="fab fa-shopify tool-icon"></i>
+                            <span class="tool-name">Shopify</span>
+                        </div>
+                        <div class="tool-item">
+                            <i class="fab fa-wordpress tool-icon"></i>
+                            <span class="tool-name">WooCommerce</span>
+                        </div>
+                        <div class="tool-item">
+                            <i class="fas fa-store tool-icon"></i>
+                            <span class="tool-name">BigCommerce</span>
+                        </div>
+                        <div class="tool-item">
+                            <i class="fab fa-amazon tool-icon"></i>
+                            <span class="tool-name">Amazon</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Payments -->
+                <div class="tool-category">
+                    <h4 class="category-title">Payments</h4>
+                    <div class="tool-items">
+                        <div class="tool-item">
+                            <i class="fab fa-stripe tool-icon"></i>
+                            <span class="tool-name">Stripe</span>
+                        </div>
+                        <div class="tool-item">
+                            <i class="fab fa-square tool-icon"></i>
+                            <span class="tool-name">Square</span>
+                        </div>
+                        <div class="tool-item">
+                            <i class="fab fa-paypal tool-icon"></i>
+                            <span class="tool-name">PayPal</span>
+                        </div>
+                        <div class="tool-item">
+                            <i class="fas fa-credit-card tool-icon"></i>
+                            <span class="tool-name">Braintree</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- POS Systems -->
+                <div class="tool-category">
+                    <h4 class="category-title">POS Systems</h4>
+                    <div class="tool-items">
+                        <div class="tool-item">
+                            <i class="fas fa-utensils tool-icon"></i>
+                            <span class="tool-name">Toast</span>
+                        </div>
+                        <div class="tool-item">
+                            <i class="fab fa-square tool-icon"></i>
+                            <span class="tool-name">Square POS</span>
+                        </div>
+                        <div class="tool-item">
+                            <i class="fas fa-cash-register tool-icon"></i>
+                            <span class="tool-name">Clover</span>
+                        </div>
+                        <div class="tool-item">
+                            <i class="fas fa-bolt tool-icon"></i>
+                            <span class="tool-name">Lightspeed</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Communication -->
+                <div class="tool-category">
+                    <h4 class="category-title">Communication</h4>
+                    <div class="tool-items">
+                        <div class="tool-item">
+                            <i class="fas fa-sms tool-icon"></i>
+                            <span class="tool-name">Twilio</span>
+                        </div>
+                        <div class="tool-item">
+                            <i class="fab fa-mailchimp tool-icon"></i>
+                            <span class="tool-name">Mailchimp</span>
+                        </div>
+                        <div class="tool-item">
+                            <i class="fab fa-whatsapp tool-icon"></i>
+                            <span class="tool-name">WhatsApp</span>
+                        </div>
+                        <div class="tool-item">
+                            <i class="fas fa-envelope tool-icon"></i>
+                            <span class="tool-name">SendGrid</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Accounting -->
+                <div class="tool-category">
+                    <h4 class="category-title">Accounting</h4>
+                    <div class="tool-items">
+                        <div class="tool-item">
+                            <i class="fas fa-calculator tool-icon"></i>
+                            <span class="tool-name">QuickBooks</span>
+                        </div>
+                        <div class="tool-item">
+                            <i class="fas fa-chart-line tool-icon"></i>
+                            <span class="tool-name">Xero</span>
+                        </div>
+                        <div class="tool-item">
+                            <i class="fas fa-file-invoice-dollar tool-icon"></i>
+                            <span class="tool-name">FreshBooks</span>
+                        </div>
+                        <div class="tool-item">
+                            <i class="fas fa-wave-square tool-icon"></i>
+                            <span class="tool-name">Wave</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Social Media -->
+                <div class="tool-category">
+                    <h4 class="category-title">Social Media</h4>
+                    <div class="tool-items">
+                        <div class="tool-item">
+                            <i class="fab fa-facebook tool-icon"></i>
+                            <span class="tool-name">Facebook</span>
+                        </div>
+                        <div class="tool-item">
+                            <i class="fab fa-instagram tool-icon"></i>
+                            <span class="tool-name">Instagram</span>
+                        </div>
+                        <div class="tool-item">
+                            <i class="fab fa-twitter tool-icon"></i>
+                            <span class="tool-name">Twitter</span>
+                        </div>
+                        <div class="tool-item">
+                            <i class="fab fa-linkedin tool-icon"></i>
+                            <span class="tool-name">LinkedIn</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Productivity -->
+                <div class="tool-category">
+                    <h4 class="category-title">Productivity</h4>
+                    <div class="tool-items">
+                        <div class="tool-item">
+                            <i class="fab fa-google tool-icon"></i>
+                            <span class="tool-name">Google Calendar</span>
+                        </div>
+                        <div class="tool-item">
+                            <i class="fas fa-book tool-icon"></i>
+                            <span class="tool-name">Notion</span>
+                        </div>
+                        <div class="tool-item">
+                            <i class="fas fa-tasks tool-icon"></i>
+                            <span class="tool-name">Asana</span>
+                        </div>
+                        <div class="tool-item">
+                            <i class="fab fa-trello tool-icon"></i>
+                            <span class="tool-name">Trello</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CRM -->
+                <div class="tool-category">
+                    <h4 class="category-title">CRM</h4>
+                    <div class="tool-items">
+                        <div class="tool-item">
+                            <i class="fab fa-salesforce tool-icon"></i>
+                            <span class="tool-name">Salesforce</span>
+                        </div>
+                        <div class="tool-item">
+                            <i class="fab fa-hubspot tool-icon"></i>
+                            <span class="tool-name">HubSpot</span>
+                        </div>
+                        <div class="tool-item">
+                            <i class="fas fa-comments tool-icon"></i>
+                            <span class="tool-name">Intercom</span>
+                        </div>
+                        <div class="tool-item">
+                            <i class="fas fa-headset tool-icon"></i>
+                            <span class="tool-name">Zendesk</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tools-cta">
+                <p class="tools-cta-text">+ Many more tools added every month</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Request Access Form -->
+    <!-- Modal Popup for Form -->
+    <div id="access-modal" class="modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="close-modal">&times;</button>
+            <div class="modal-body">
+                <h2 class="section-title">Request <span class="gradient-text">Early Access</span></h2>
+                <p class="section-subtitle">
+                    Join the waitlist and be among the first to give your business a voice
+                </p>
+
+                <form id="access-form" class="access-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Enter your name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email <span style="color: var(--primary-light);">(Email or Phone required)</span></label>
+                        <input type="email" id="email" name="email" placeholder="your@email.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number <span style="color: var(--primary-light);">(Email or Phone required)</span></label>
+                        <input type="tel" id="phone" name="phone" placeholder="+1 (555) 123-4567">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="checkbox-item sms-consent">
+                            <input type="checkbox" name="sms_consent" id="sms-consent" value="yes">
+                            <span class="checkbox-label">I agree to receive SMS messages from Ghost OS. Standard messaging rates may apply. Reply STOP to opt out.</span>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-large">
+                        Request Early Access
+                    </button>
+
+                    <p class="form-note">
+                        We'll reach out within 24 hours to set up your Ghost OS
+                    </p>
+                </form>
+
+                <!-- Thank You Message (hidden by default) -->
+                <div id="thank-you-message" class="thank-you-message" style="display: none;">
+                    <div class="thank-you-icon">✨</div>
+                    <h3>Thank You!</h3>
+                    <p>
+                        We will be reaching out soon with updates.
+                    </p>
+                    <p class="thank-you-note">
+                        Get ready to give your business a voice! 🎤
+                    </p>
+                    <button class="btn btn-secondary" onclick="location.reload()">
+                        Submit Another Request
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- All Tools Talk Section -->
+    <section class="all-tools-talk">
+        <div class="container">
+            <h2 class="section-title">All Your Tools <span class="gradient-text">Talk to Each Other</span></h2>
+            <p class="section-subtitle">
+                The real magic: Your tools don't just listen to you.<br>
+                Ghost OS makes them communicate with each other automatically.
+            </p>
+
+            <div class="tools-communication">
+                <div class="comm-example">
+                    <div class="comm-trigger">
+                        <span class="comm-icon">📧</span>
+                        <span class="comm-text">New email arrives</span>
+                    </div>
+                    <div class="comm-arrow">→</div>
+                    <div class="comm-action">
+                        <span class="comm-icon">👻</span>
+                        <span class="comm-text">Ghost OS reads it</span>
+                    </div>
+                    <div class="comm-arrow">→</div>
+                    <div class="comm-action">
+                        <span class="comm-icon">📅</span>
+                        <span class="comm-text">Adds event to calendar</span>
+                    </div>
+                    <div class="comm-arrow">→</div>
+                    <div class="comm-action">
+                        <span class="comm-icon">📱</span>
+                        <span class="comm-text">Sends you SMS reminder</span>
+                    </div>
+                </div>
+
+                <div class="comm-example">
+                    <div class="comm-trigger">
+                        <span class="comm-icon">🛒</span>
+                        <span class="comm-text">Customer places order</span>
+                    </div>
+                    <div class="comm-arrow">→</div>
+                    <div class="comm-action">
+                        <span class="comm-icon">👻</span>
+                        <span class="comm-text">Ghost OS processes</span>
+                    </div>
+                    <div class="comm-arrow">→</div>
+                    <div class="comm-action">
+                        <span class="comm-icon">💳</span>
+                        <span class="comm-text">Charges card via Stripe</span>
+                    </div>
+                    <div class="comm-arrow">→</div>
+                    <div class="comm-action">
+                        <span class="comm-icon">📨</span>
+                        <span class="comm-text">Emails receipt</span>
+                    </div>
+                    <div class="comm-arrow">→</div>
+                    <div class="comm-action">
+                        <span class="comm-icon">📦</span>
+                        <span class="comm-text">Updates inventory</span>
+                    </div>
+                </div>
+
+                <div class="comm-example">
+                    <div class="comm-trigger">
+                        <span class="comm-icon">🌡️</span>
+                        <span class="comm-text">Temperature drops</span>
+                    </div>
+                    <div class="comm-arrow">→</div>
+                    <div class="comm-action">
+                        <span class="comm-icon">👻</span>
+                        <span class="comm-text">Ghost OS detects</span>
+                    </div>
+                    <div class="comm-arrow">→</div>
+                    <div class="comm-action">
+                        <span class="comm-icon">🔥</span>
+                        <span class="comm-text">Adjusts thermostat</span>
+                    </div>
+                    <div class="comm-arrow">→</div>
+                    <div class="comm-action">
+                        <span class="comm-icon">💡</span>
+                        <span class="comm-text">Turns on lights</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="all-tools-message">
+                <h3>Not Just Business Tools. ALL Tools.</h3>
+                <p>
+                    Spotify, Netflix, Uber, DoorDash, Amazon, Gmail, Slack, Discord, Twitter,
+                    Instagram, Banking apps, Fitness trackers, Smart home devices... everything.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Developer Sandbox Section -->
+    <section class="developer-sandbox">
+        <div class="container">
+            <div class="sandbox-content">
+                <div class="sandbox-icon">
+                    <span style="font-size: 4rem;">👨‍💻</span>
+                </div>
+                <h2 class="section-title">Developer <span class="gradient-text">Sandbox</span></h2>
+                <p class="section-subtitle">
+                    Build custom integrations and automations with Ghost OS
+                </p>
+
+                <div class="coming-soon-badge">
+                    <span class="badge-pulse"></span>
+                    COMING SOON
+                </div>
+
+                <div style="text-align: center; margin-top: 3rem;">
+                    <button class="btn btn-primary btn-large open-dev-modal">Join Developer Waitlist</button>
+                    <p style="margin-top: 1rem; color: var(--text-secondary); font-size: 0.875rem;">Get early access to the developer sandbox</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Developer Waitlist Modal -->
+    <div id="dev-modal" class="modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="close-dev-modal">&times;</button>
+            <div class="modal-body">
+                <h2 class="section-title">Join <span class="gradient-text">Developer Waitlist</span></h2>
+                <p class="section-subtitle">
+                    Get early access to the Ghost OS developer sandbox
+                </p>
+
+                <form id="dev-form" class="access-form">
+                    <div class="form-group">
+                        <label for="dev-name">Name</label>
+                        <input type="text" id="dev-name" name="name" required placeholder="Enter your name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dev-email">Email <span style="color: var(--primary-light);">(Email or Phone required)</span></label>
+                        <input type="email" id="dev-email" name="email" placeholder="your@email.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dev-phone">Phone Number <span style="color: var(--primary-light);">(Email or Phone required)</span></label>
+                        <input type="tel" id="dev-phone" name="phone" placeholder="+1 (555) 123-4567">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="checkbox-item sms-consent">
+                            <input type="checkbox" name="dev_sms_consent" id="dev-sms-consent" value="yes">
+                            <span class="checkbox-label">I agree to receive SMS messages from Ghost OS. Standard messaging rates may apply. Reply STOP to opt out.</span>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-large">
+                        Join Developer Waitlist
+                    </button>
+
+                    <p class="form-note">
+                        We'll reach out within 24 hours about developer sandbox access
+                    </p>
+                </form>
+
+                <!-- Thank You Message (hidden by default) -->
+                <div id="dev-thank-you-message" class="thank-you-message" style="display: none;">
+                    <div class="thank-you-icon">✨</div>
+                    <h3>Thank You!</h3>
+                    <p>
+                        We will be reaching out soon with developer sandbox updates.
+                    </p>
+                    <p class="thank-you-note">
+                        Get ready to build with Ghost OS! 👨‍💻
+                    </p>
+                    <button class="btn btn-secondary" onclick="location.reload()">
+                        Submit Another Request
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Us Footer -->
+    <footer class="contact-footer">
+        <div class="container">
+            <h2 class="section-title">Contact <span class="gradient-text">Us</span></h2>
+            <p class="section-subtitle">
+                Have questions? Get in touch with our team
+            </p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span class="contact-icon">📧</span>
+                    <a href="mailto:info@cybercheckinc.com" class="contact-link">info@cybercheckinc.com</a>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2024 Ghost OS. All rights reserved. Patent Pending.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
