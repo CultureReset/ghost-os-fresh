@@ -38,6 +38,19 @@ body {
     color: var(--text-primary);
     line-height: 1.6;
     overflow-x: hidden;
+    min-width: 320px;
+}
+
+/* Prevent layout shift on resize */
+html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 /* === ANIMATED BACKGROUND (Removed - Now using Earth) === */
@@ -247,14 +260,15 @@ body {
 }
 
 .ghost-logo {
-    width: 95vw;
-    max-width: 95%;
+    width: 100%;
+    max-width: 800px;
     height: auto;
-    max-height: 70vh;
+    max-height: 500px;
     object-fit: contain;
     display: block;
     filter: drop-shadow(0 0 40px rgba(0, 0, 0, 0.8));
     animation: ghostFloat 6s ease-in-out infinite;
+    margin: 0 auto;
 }
 
 @keyframes ghostFloat {
@@ -1915,9 +1929,8 @@ section {
     }
 
     .ghost-logo {
-        width: 95vw;
-        max-width: 95%;
-        max-height: 60vh;
+        max-width: 650px;
+        max-height: 400px;
     }
 
     .earth-background {
@@ -2133,9 +2146,8 @@ section {
     }
 
     .ghost-logo {
-        width: 90vw;
-        max-width: 92%;
-        max-height: 50vh;
+        max-width: 500px;
+        max-height: 350px;
     }
 
     .header {
