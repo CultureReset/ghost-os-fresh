@@ -3165,29 +3165,60 @@ body, html {
 
 .privacy-comparison {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 3rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
     margin-top: 4rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .comparison-column {
-    background: rgba(26, 26, 46, 0.4);
-    border-radius: 16px;
-    padding: 2rem;
+    background: rgba(26, 26, 46, 0.6);
+    border-radius: 20px;
+    padding: 2.5rem 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.comparison-column::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
 }
 
 .comparison-bad {
-    border: 2px solid rgba(239, 68, 68, 0.3);
+    border: 3px solid rgba(239, 68, 68, 0.5);
+}
+
+.comparison-bad::before {
+    background: linear-gradient(90deg, #ef4444, #dc2626);
 }
 
 .comparison-good {
-    border: 2px solid rgba(34, 197, 94, 0.3);
+    border: 3px solid rgba(34, 197, 94, 0.5);
+}
+
+.comparison-good::before {
+    background: linear-gradient(90deg, #22c55e, #16a34a);
 }
 
 .comparison-column h4 {
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
     text-align: center;
+    font-weight: 700;
+}
+
+.comparison-bad h4 {
+    color: #f87171;
+}
+
+.comparison-good h4 {
+    color: #4ade80;
 }
 
 .comparison-column ul {
@@ -3196,13 +3227,46 @@ body, html {
 }
 
 .comparison-column li {
-    padding: 0.75rem 0;
-    color: var(--text-secondary);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1rem 1rem 1rem 2rem;
+    color: var(--text-primary);
+    font-size: 1.05rem;
+    margin-bottom: 0.75rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 8px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.comparison-column li:hover {
+    background: rgba(255, 255, 255, 0.05);
+    transform: translateX(5px);
+}
+
+.comparison-column li::before {
+    content: '•';
+    position: absolute;
+    left: 0.75rem;
+    font-size: 1.5rem;
+}
+
+.comparison-bad li::before {
+    color: #ef4444;
+}
+
+.comparison-good li::before {
+    color: #22c55e;
 }
 
 .comparison-column li:last-child {
-    border-bottom: none;
+    margin-bottom: 0;
+}
+
+/* Responsive - side by side on tablet and up */
+@media (max-width: 768px) {
+    .privacy-comparison {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
 }
 
 /* Automate Section */
