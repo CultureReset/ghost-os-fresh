@@ -96,7 +96,7 @@
         <!-- About Section -->
         <div class="container" style="margin-top: 2rem;">
             <h2 class="section-title">ABOUT <span class="gradient-text">GHOST OS</span></h2>
-            <div style="max-width: 900px; margin: 0 auto; text-align: left; font-size: 1.1rem; line-height: 1.8; color: #e0e0e0;">
+            <div style="max-width: 900px; margin: 0 auto; text-align: center; font-size: 1.1rem; line-height: 1.8; color: #e0e0e0;">
                 <div id="about-preview">
                     <p style="margin-bottom: 1.5rem;">
                         The internet finally has an operating system.
@@ -1255,9 +1255,6 @@
     <section id="how-it-works" class="how-it-works">
         <div class="container">
             <h2 class="section-title">How It <span class="gradient-text">Works</span></h2>
-            <p class="section-subtitle">
-                Your verified caller ID connects to Ghost OS, which connects to all your tools
-            </p>
 
             <!-- Visual Diagram -->
             <div class="architecture-diagram">
@@ -1502,6 +1499,28 @@
                         </label>
                     </div>
 
+                    <div class="form-group">
+                        <label style="display: block; margin-bottom: 1rem; font-weight: 600; color: var(--text);">What would you use Ghost OS for?</label>
+                        <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="use_case" value="automate_tasks">
+                                <span class="checkbox-label">Automate tasks</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="use_case" value="talking_to_tools">
+                                <span class="checkbox-label">Talking to all your tools</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="use_case" value="no_upload_ai_feedback">
+                                <span class="checkbox-label">No upload feedback from AI about any of your attached tools</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="use_case" value="all_above">
+                                <span class="checkbox-label">All the above</span>
+                            </label>
+                        </div>
+                    </div>
+
                     <button type="submit" class="btn btn-primary btn-large">
                         Request Early Access
                     </button>
@@ -1714,12 +1733,36 @@
             <p class="section-subtitle">
                 Have questions? Get in touch with our team
             </p>
-            <div class="contact-info">
-                <div class="contact-item">
-                    <span class="contact-icon">📧</span>
-                    <a href="mailto:info@cybercheckinc.com" class="contact-link">info@cybercheckinc.com</a>
+
+            <form id="contact-form" class="access-form" action="https://formsubmit.co/info@cybercheckinc.com" method="POST" style="max-width: 600px; margin: 2rem auto;">
+                <div class="form-group">
+                    <label for="contact-name">Name</label>
+                    <input type="text" id="contact-name" name="name" required placeholder="Enter your name">
                 </div>
-            </div>
+
+                <div class="form-group">
+                    <label for="contact-number">Phone Number</label>
+                    <input type="tel" id="contact-number" name="phone" required placeholder="+1 (555) 123-4567">
+                </div>
+
+                <div class="form-group">
+                    <label for="contact-email">Email</label>
+                    <input type="email" id="contact-email" name="email" required placeholder="your@email.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="contact-question">Question / Message</label>
+                    <textarea id="contact-question" name="message" required placeholder="How can we help you?" rows="5" style="width: 100%; padding: 1rem; background: rgba(26, 26, 46, 0.6); border: 1px solid rgba(139, 92, 246, 0.3); border-radius: 8px; color: var(--text); font-size: 1rem; font-family: inherit; resize: vertical;"></textarea>
+                </div>
+
+                <input type="hidden" name="_subject" value="New Contact Form Submission - Ghost OS">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="text" name="_honey" style="display:none">
+
+                <button type="submit" class="btn btn-primary btn-large">
+                    Send Message
+                </button>
+            </form>
             <div class="footer-copyright">
                 <p>&copy; 2024 Ghost OS. All rights reserved. Patent Pending.</p>
             </div>

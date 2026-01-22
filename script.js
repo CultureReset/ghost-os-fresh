@@ -57,6 +57,9 @@ if (form) {
         const phone = formData.get('phone');
         const smsConsent = formData.get('sms_consent') === 'yes';
 
+        // Get use cases (multiple checkboxes with same name)
+        const useCases = formData.getAll('use_case');
+
         // Validate
         if (!name) {
             alert('Please enter your name');
@@ -74,6 +77,7 @@ if (form) {
             email: email || 'Not provided',
             phone: phone || 'Not provided',
             sms_consent: smsConsent ? 'Yes' : 'No',
+            use_cases: useCases.length > 0 ? useCases.join(', ') : 'Not specified',
             timestamp: new Date().toISOString(),
             source: 'Early Access Form',
             url: window.location.href
@@ -240,6 +244,11 @@ async function sendViaFormSubmit(data) {
     // Add SMS consent if present
     if (data.sms_consent) {
         formData.append('sms_consent', data.sms_consent);
+    }
+
+    // Add use cases if present
+    if (data.use_cases) {
+        formData.append('use_cases', data.use_cases);
     }
 
     const response = await fetch(`https://formsubmit.co/${LEAD_CONFIG.formSubmitEmail}`, {
